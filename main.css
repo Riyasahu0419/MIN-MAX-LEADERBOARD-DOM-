@@ -1,0 +1,133 @@
+#container{
+    /* border: 1px solid black; */
+    width: 450px;
+    height:1000px;
+    margin-left: 650px;
+    padding: 15px;
+    box-shadow:0px  0px 16px 0px;
+}
+#subcontainer{
+    /* border: 1px solid black; */
+    width: 450px;
+    height: 100px;
+    display: flex;
+
+    
+}
+.st1{
+    border: 2px solid black;
+    height: 100px;
+    width: 140px;
+    text-align: center;
+    background-color: red;
+    
+    
+    
+}
+
+.st2{
+    border: 2px solid black;
+    height: 100px;
+    width: 140px;
+    /* float: right; */
+    text-align: center;
+    margin-left: 170px;
+    background-color: rgb(110, 177, 11);
+    
+}
+.st3{
+    border: 2px solid black;
+    height: 120px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    background-color: rgb(179,179,179);
+    
+    
+}
+.st3>p{
+    font-size: 60px;
+    margin-top: 20px;
+
+}
+.score{
+margin-top: -20px;
+}
+.st4{
+    /* border: 1px solid red; */
+    height: 240px;
+    width: 300px;
+    margin: auto;
+    padding-top: -200px;
+}
+._1{
+    
+    /* border: 1px solid red; */
+    text-align: center;
+    height: 80px;
+    display: flex;
+    width: 300px;
+    margin-top: 40px;
+}
+
+._1>div{
+    
+    border: 2px solid black;
+    margin: 1px 15px 15px 10px;  
+    height: 80px;
+    width: 100px;
+    /* background-color: red;   */
+}
+._1>div>p{
+    margin: 20px;
+}
+._1>._2{
+    
+    border: 2px solid black;
+    height: 80px;
+    width: 74px;
+    margin: auto;
+    text-align: center;
+    /* margin-top: 40px; */
+    background-color: rgb(132,55,102);
+    
+}
+._2>p{
+    margin: 20px;
+    color: aliceblue;
+    
+}
+._3{
+    border: 2px solid black;
+    height: 80px;
+    display: flex;
+    width: 300px;
+    margin-top: 20px;
+    background-color: black;
+}
+._3>p{
+  margin: auto; 
+  color: aliceblue;
+  /* text-align: center; */
+}
+
+
+
+p{
+    font-size: 30px;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+.p{
+    display: flex;
+}
+.p>p{
+    margin-top: 10px;
+}
+.green{
+    background-color:rgb(102,129,8) ;
+}
+.red{
+    background-color:rgb(230,94,1);
+}
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+   
+    
+    <style>
+        * {
+          font-family:'Poppins';
+        }
+        
+   
+        
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="subcontainer">
+        <div class="st1">
+            <p>43</p>
+        </div>
+        
+        <div class="st2">
+            <p>2019</p>
+        </div>
+    </div>
+    <div class="p">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MAX</p>
+    </div>
+    <p class="score">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SCORE</p>
+    <div class="st3"><p>#</p></div>
+    <!-- <p></p> -->
+    
+    <div class="st4">
+        <div class="_1">
+            <div class="green"><p>1</p></div>
+            <div class="red"><p>2</p></div>
+            <div class="green"><p>3</p></div>
+        </div>
+        <div class="_1">
+            <div class="red"><p>4</p></div>
+            <div class="red"><p>5</p></div>
+            <div class="red"><p>6</p></div>
+        </div>
+        <div class="_1">
+            <div class="green"><p>7</p></div>
+            <div class="red"><p>8</p></div>
+            <div class="green"><p>9</p></div>
+            
+        </div>
+        <div class="_1">
+            <div class="_2"><p>0</p></div>
+
+        </div>
+        
+        <div class="_3"><p>ENTER</p></div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    let currentScore = '';
+
+    function addNumberToScore(number) {
+        currentScore += number;
+        updateScoreDisplay();
+    }
+
+    function updateScoreDisplay() {
+        const scoreDisplay = document.querySelector('.score');
+        scoreDisplay.textContent = currentScore;
+    }
+
+    function enterScore() {
+        const score = parseInt(currentScore);
+        const minScore = parseInt(document.querySelector('.st1 p').textContent);
+        const maxScore = parseInt(document.querySelector('.st2 p').textContent);
+
+        if (score < minScore) {
+            document.querySelector('.st1 p').textContent = score;
+        }
+
+        if (score > maxScore) {
+            document.querySelector('.st2 p').textContent = score;
+        }
+
+        currentScore = '';
+        updateScoreDisplay();
+    }
+
+    const numberButtons = document.querySelectorAll('._1 div');
+    numberButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            addNumberToScore(button.textContent);
+        });
+    });
+
+    const enterButton = document.querySelector('._3');
+    enterButton.addEventListener('click', enterScore);
+</script>
